@@ -10,11 +10,15 @@ export class SpotifyService {
 
   constructor(private configService: ConfigService) {
     const clientId = this.configService.get<string>('SPOTIFY_CLIENT_ID');
-    const clientSecret = this.configService.get<string>('SPOTIFY_CLIENT_SECRET');
+    const clientSecret = this.configService.get<string>(
+      'SPOTIFY_CLIENT_SECRET'
+    );
     const apiUrl = this.configService.get<string>('SPOTIFY_API_URL');
 
     if (!clientId || !clientSecret || !apiUrl) {
-      throw new Error('Spotify credentials are not defined in environment variables.');
+      throw new Error(
+        'Spotify credentials are not defined in environment variables.'
+      );
     }
 
     this.clientId = clientId;
@@ -23,7 +27,9 @@ export class SpotifyService {
   }
 
   async getAccessToken(): Promise<string> {
-    const auth = Buffer.from(`${this.clientId}:${this.clientSecret}`).toString('base64');
+    const auth = Buffer.from(`${this.clientId}:${this.clientSecret}`).toString(
+      'base64'
+    );
 
     const response = await axios.post<{ access_token: string }>(
       'https://accounts.spotify.com/api/token',
@@ -33,7 +39,7 @@ export class SpotifyService {
           Authorization: `Basic ${auth}`,
           'Content-Type': 'application/x-www-form-urlencoded',
         },
-      },
+      }
     );
 
     return response.data.access_token;
