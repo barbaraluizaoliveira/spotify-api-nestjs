@@ -20,78 +20,47 @@
 </p>
   <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
   [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+  
+## **Spotify API - NestJS**
 
-## Description
+Este é um projeto que utiliza o framework **NestJS** para consumir a API do **Spotify**. O sistema autentica-se no Spotify usando o fluxo **Client Credentials Flow**, permitindo a busca de artistas, exibição de detalhes de artistas e álbuns.
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+## **Arquitetura do Projeto**
 
-## Project setup
+Este projeto utiliza a **arquitetura modular** do **NestJS**, onde o código é organizado em **módulos**, **controladores** e **serviços**.
 
-```bash
-$ npm install
-```
+- **Módulos**: Organizam o código em partes, como o módulo de **Spotify**.
+- **Controladores**: São responsáveis por lidar com as requisições HTTP, como buscar artistas ou álbuns.
+- **Serviços**: Contêm a lógica de negócios, como fazer requisições à API do Spotify para buscar dados.
 
-## Compile and run the project
+A comunicação entre essas partes é feita de forma simples: o controlador recebe uma requisição, chama o serviço para processar a lógica e retorna os dados para o usuário.
 
-```bash
-# development
-$ npm run start
+### Fluxo do Sistema
 
-# watch mode
-$ npm run start:dev
+1. O **cliente** (por exemplo, o navegador ou o Insomnia) faz uma requisição para o servidor.
+2. O **controlador** recebe a requisição e chama o **serviço**.
+3. O **serviço** interage com a **API do Spotify** para buscar as informações necessárias.
+4. O **controlador** envia os dados de volta para o cliente.
 
-# production mode
-$ npm run start:prod
-```
+Essa organização ajuda a manter o código limpo e fácil de entender e modificar.
 
-## Run tests
+## **Instalação**
 
-```bash
-# unit tests
-$ npm run test
+1. Clone este repositório para o seu ambiente local:
 
-# e2e tests
-$ npm run test:e2e
+   ```bash
+   git clone https://github.com/barbaraluizaoliveira/spotify-api-nestjs.git
+   npm install
+  
 
-# test coverage
-$ npm run test:cov
-```
+2. Na raiz do projeto, crie um arquivo chamado .env com as seguintes variáveis de ambiente:
 
-## Deployment
+## **Spotify API Config** 
+SPOTIFY_CLIENT_ID=seu_client_id_aqui
 
-When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
+SPOTIFY_CLIENT_SECRET=seu_client_secret_aqui
 
-If you are looking for a cloud-based platform to deploy your NestJS application, check out [Mau](https://mau.nestjs.com), our official platform for deploying NestJS applications on AWS. Mau makes deployment straightforward and fast, requiring just a few simple steps:
-
-```bash
-$ npm install -g @nestjs/mau
-$ mau deploy
-```
-
-With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
-
-## Resources
-
-Check out a few resources that may come in handy when working with NestJS:
-
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Deploy your application to AWS with the help of [NestJS Mau](https://mau.nestjs.com) in just a few clicks.
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+SPOTIFY_API_URL=https://api.spotify.com/v1
 
 ## License
 
