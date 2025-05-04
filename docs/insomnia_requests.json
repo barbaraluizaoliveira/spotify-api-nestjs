@@ -1,0 +1,120 @@
+type: collection.insomnia.rest/5.0
+name: spotify
+meta:
+  id: wrk_46de21c00b43407b938f5b6e5c7561e1
+  created: 1746194543775
+  modified: 1746194543775
+collection:
+  - url: http://localhost:3000/spotify/search
+    name: GetAllArtists
+    meta:
+      id: req_ace3159a854244f2b21bcadb734c88e3
+      created: 1746194561854
+      modified: 1746386232614
+      isPrivate: false
+      sortKey: -1746194561854
+    method: GET
+    parameters:
+      - id: pair_e8076d764f9946b8907a4d321eb3f72b
+        name: query
+        value: maria rita
+        disabled: false
+    headers:
+      - name: User-Agent
+        value: insomnia/11.0.2
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/spotify/artists/1C8UBSZs5rOPfxuxTMS6OI
+    name: GetArtistsId
+    meta:
+      id: req_259cc58d2edd40e692a9476d9aa2f811
+      created: 1746194577906
+      modified: 1746386251366
+      isPrivate: false
+      sortKey: -1746194577906
+    method: GET
+    parameters:
+      - id: pair_74288bf159f8493585d741dc8453bdd8
+        disabled: false
+    headers:
+      - name: User-Agent
+        value: insomnia/11.0.2
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/spotify/artists/1C8UBSZs5rOPfxuxTMS6OI/albums
+    name: GetArtistsAlbums
+    meta:
+      id: req_34226955b03440ad8ff3b26bbd3023da
+      created: 1746194612941
+      modified: 1746386297914
+      isPrivate: false
+      sortKey: -1746194612941
+    method: GET
+    parameters:
+      - id: pair_10a79b08d06943ee81bcd09ee769ba67
+        name: limit
+        value: "10"
+        disabled: false
+      - id: pair_57b9c48abbc54dadab60293655bd8df2
+        name: offset
+        value: "0"
+        disabled: false
+    headers:
+      - name: User-Agent
+        value: insomnia/11.0.2
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/spotify/albums/3n10awB5Q6e6xyp4OhTaIO
+    name: GetAlbumsId
+    meta:
+      id: req_8987edba60824c93ac4001c684162689
+      created: 1746194644819
+      modified: 1746386408800
+      isPrivate: false
+      sortKey: -1746194644819
+    method: GET
+    parameters:
+      - id: pair_8ab928c5b52045e88e4e7d18698ad65c
+        disabled: false
+    headers:
+      - name: User-Agent
+        value: insomnia/11.0.2
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_35c001c1df88ae1bfbea6802f4a15a3ea72a0073
+    created: 1746194543779
+    modified: 1746194543779
+environments:
+  name: Base Environment
+  meta:
+    id: env_35c001c1df88ae1bfbea6802f4a15a3ea72a0073
+    created: 1746194543777
+    modified: 1746194543777
+    isPrivate: false
