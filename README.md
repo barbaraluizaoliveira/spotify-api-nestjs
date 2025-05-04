@@ -62,6 +62,22 @@ SPOTIFY_CLIENT_SECRET=seu_client_secret_aqui
 
 SPOTIFY_API_URL=https://api.spotify.com/v1
 
+3. Rodar o projeto
+   ```bash
+   npm run start
+
+4. Testando endpoints:
+
+## **Testando os Endpoints com Insomnia**
+
+Para testar os endpoints da API com Insomnia, importe o arquivo de requisições incluído neste repositório.
+
+1. Baixe o arquivo [insomnia_requests.json](./docs/insomnia_requests.json).
+2. Abra o **Insomnia**.
+3. Selecione **File > Import** e escolha o arquivo baixado.
+4. A coleção de requisições será carregada no Insomnia. Você pode agora testar os endpoints da API.
+
+
 ## License
 
 Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
