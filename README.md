@@ -37,7 +37,7 @@ A comunicação entre essas partes é feita de forma simples: o controlador rece
 
 ### Fluxo do Sistema
 
-1. O **cliente** (por exemplo, o navegador ou o Insomnia) faz uma requisição para o servidor.
+1. O **cliente** faz uma requisição para o servidor.
 2. O **controlador** recebe a requisição e chama o **serviço**.
 3. O **serviço** interage com a **API do Spotify** para buscar as informações necessárias.
 4. O **controlador** envia os dados de volta para o cliente.
